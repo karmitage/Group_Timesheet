@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Employee Data Management</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Firebase link -->
+    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase.js"></script>
+
+
+</head>
+
+<body>
+
+    <div class="row justify-content-md-center">
+        <div class="col-md-10">
+
+            <div class="jumbotron">
+                <h1 class="display-4">Employee Data Management</h1>
+                <p class="lead">A Comprehensive Directory of Employee Billable Hours</p>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <strong>Current Employees</strong>
+                </div>
+                <br>
+                <div class="col-md-12">
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th scope="col">Employee Name</th>
+                                <th scope="col">Role</th>
+                                <th scope="col">Start Date</th>
+                                <th scope="col">Monthly Rate ($)</th>
+                                <th scope="col">Months Worked</th>
+                                <th scope="col">Total Billed ($)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="displayResults">
+                            <!-- <tr>
+                                <th scope="row"></th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                           -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="row justify-content-md-center">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong>Add Employee</strong>
+                        </div>
+                        <br>
+                        <div class="col-md-12">
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Employee Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Type your name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Role</label>
+                                    <input type="text" class="form-control" id="role" placeholder="Type your role">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Start Date (MM/DD/YYYY)</label>
+                                    <input type="text" class="form-control" id="date"
+                                        placeholder="Type your start date">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Monthly Rate</label>
+                                    <input type="text" class="form-control" id="rate" placeholder="Type your rate">
+                                </div>
+                            </form>
+                            <button id="search" type="submit" class="btn btn-primary">Submit</button>
+                            <br><br>
+                        </div>
+                    </div>
+                </div><br><br><br>
+
+
+            </div>
+        </div>
+
+</body>
+
+<!-- JAVASCRIPT  -->
+<!-- ========================================= -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="assets/app.js"></script>
+
+</html>
